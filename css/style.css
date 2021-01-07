@@ -1,0 +1,342 @@
+html, body{
+	 scroll-behavior: smooth; 
+}
+
+* {
+ 	margin: 0;
+ 	padding: 0;
+ 	box-sizing: border-box;
+ }
+ 
+div.conteiner {
+	max-width: 900px;
+	min-width: 797px;
+	min-height: 100vh;
+	height: 60vh;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: "header" "main" "footer";
+	margin-top: 5%;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+	padding: 3%;
+	background: url(../images/hero-image.jpg) no-repeat 100%;
+	height: 70vh;
+	max-height: 428px;	
+	display: grid;
+	grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+	grid-template-rows: 1fr 2fr 2fr 0.2fr;
+	grid-gap: 1%;
+	grid-template-areas: "logo logo . . . ." 
+	". flavor flavor flavor flavor ." 
+	". flavor flavor flavor flavor ."
+	". . . . . .";
+}
+.cell1 {
+	grid-area: logo;
+	grid-column: 1/3;
+	width: 60%;
+	height: 100%;
+	background: url(../images/logo.png) no-repeat;
+	background-size: 100%;
+}
+
+.cell2{
+	grid-area: flavor;
+	position: relative;
+	background:#FFFFFF;	
+	padding: 5% 40% 4% 8%;	
+	min-width: 470px;
+	box-shadow: -2px 8px 13px 0px rgba(0,0,0,0.75);
+	-webkit-box-shadow: -2px 8px 13px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: -2px 8px 13px 0px rgba(0,0,0,0.75);
+}
+
+img.logo {
+	width: 1vw;
+
+}
+
+img.bottle1 {
+	z-index: 4;
+	position: absolute;
+	width:45%;
+	bottom: -82px;
+	right:-46px;
+}
+
+h1 {
+	font: 300 2.2em 'Playfair Display', serif;
+	padding-bottom: 6%;
+}
+
+h1~hr {
+	width: 50%;
+	border: 0.5px solid #E9E512;
+	position: absolute;
+	left: -50px;
+}
+
+.text1 {
+	margin-top: 7%;
+	font: 300 1.1em 'Darker Grotesque', sans-serif;
+}
+
+main {
+	height: auto;	
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 0.8fr 0.8fr;
+	grid-gap: 1%;
+	grid-template-areas: "main1" "main2" "main3";
+	position: relative;
+}
+
+.main1 {
+	z-index: 3;
+	margin-top: -3%;
+	margin-bottom: -5%;
+	background: url(../images/history-bg.png) no-repeat;
+	background-size: 100% 100%;
+	padding: 9%;	
+	height: auto;	
+	display: grid;
+	grid-template-columns: 1fr 2fr 2fr;
+	grid-template-rows: 1fr 2fr 3fr;
+	grid-gap: 3%;
+	grid-template-areas: "foto1 foto1 ."
+	"foto1 foto1 story"
+	". foto2 story";
+}
+
+.cell3 {
+	grid-area: foto1;
+ 	grid-column: 1/3;
+ 	width: 100%;
+	height: 100%;
+	background: url(../images/born-img-01.jpg) no-repeat;
+	background-size: 100%; 
+}
+
+.cell4 {
+	grid-area: foto2;
+	grid-column: 2/3;
+	width: 100%;
+	height: 100%;
+	background: url(../images/born-img-02.jpg) no-repeat;
+	background-size: 100%;
+}
+
+.cell5 {
+	grid-area: story;
+	width: 100%;
+	height: 100%;
+	background-size: 100%;
+	position: relative;
+}
+
+h3~hr {
+	width: 137%;
+	border: 0.5px solid #FFFFFF;
+	position: absolute;
+	left: -100px;
+	top: -18px;
+}
+
+h3 {
+	font: 300 2.1em 'Playfair Display', serif;
+	padding-bottom: 6%;
+}
+
+hr~p {
+	font: 300 1.1em 'Darker Grotesque', sans-serif;
+}
+
+.main2 {
+	z-index: 1;
+	margin-top: -3%;
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/sprits-bg.jpg) no-repeat;
+	background-size: 100%;
+	padding: 11% 11% 15% 11%;
+	min-height: 605px; 	
+	height: 70vh;	
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 1fr 305px auto;
+	grid-column-gap: 15px;
+    grid-row-gap: 15px;
+	grid-template-areas: "spirits spirits spirits spirits spirits"
+	"Limonsello Pescacello Applecello Sambuca Amaretto"
+	"Limonsell Pescacell Applecell Sambuc Amarett";
+}
+
+.cell6 {
+	grid-area: spirits;
+	grid-column: 1/6;
+	text-align: center;
+	font: 100 1.2em 'Darker Grotesque', sans-serif;
+	letter-spacing:0.3em;
+	padding-bottom:15px;	
+	color: #FFFFFF;
+}
+
+.cell7 {
+	grid-area: Limonsello;
+	background: url(../images/sprits-img-01.png) no-repeat;	
+	background-size: 133px;
+}
+
+.cell8 {
+	grid-area: Pescacello;
+	background: url(../images/sprits-img-02.png) no-repeat;	
+	background-size: 133px;
+}
+.cell9 {
+	grid-area: Applecello;
+	background: url(../images/sprits-img-03.png) no-repeat;	
+	background-size: 133px;
+}
+.cell10 {
+	grid-area: Sambuca;
+	background: url(../images/sprits-img-04.png) no-repeat;
+	background-size: 133px;	
+}
+.cell11 {
+	grid-area: Amaretto;
+	background: url(../images/sprits-img-05.png) no-repeat;	
+	background-size: 133px;
+}
+.cell12 {
+	grid-area: Limonsell;	
+}
+
+.cell13 {
+	grid-area: Pescacell;
+}
+.cell14 {
+	grid-area: Applecell;
+}
+.cell15 {
+	grid-area: Sambuc;	
+}
+.cell16 {
+	grid-area: Amarett;
+}
+.text3 {
+	text-align: center;
+	color: #FFFFFF;
+	font: 200 1.1em 'Vidaloka', serif;
+}
+
+#hh{
+	width: 65%;
+	border: 1px solid #FFE0B1;
+	display: inline-block;
+}
+
+div.cell6 {
+	text-align: center;
+}
+
+.main3 {
+	z-index: 3;
+	margin-top: -8%;
+	background: url(../images/contact-bg.png) no-repeat;
+	background-size: cover;	
+	height: 123%;	
+	padding: 8% 31% 14% 31%; 
+}
+
+form {
+	color:#FFFFFF;
+	font: 300 1.1em 'Vidaloka', serif;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: 1fr repeat(4, 0.3fr);
+	grid-column-gap: 15px;
+    grid-row-gap: 15px;
+	grid-template-areas: "legend" "name" "mail" "message" "submit";
+}
+
+label {
+	display: none;
+}
+
+legend {
+	font: 500 1.8em 'Vidaloka', serif;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+input {
+	background: transparent;
+	color: #FFFFFF;
+	height: 40px;
+	border: none;
+	border-bottom: 1.5px solid #776D6E;
+}
+
+input::placeholder {
+	color: #FFFFFF;
+	font: 300 0.9em 'Vidaloka', serif;
+	
+}
+
+input[type="submit"] {
+	width: 70%;
+	border: 1.5px solid #FCF8C2;	
+	margin: 15px auto 0;
+	font: 100 0.9em 'Darker Grotesque', sans-serif;
+	letter-spacing:0.3em;
+}
+
+footer {
+	font: 100 1.1em 'Darker Grotesque', sans-serif;
+	margin-right: auto;
+	text-align: center;
+	position: sticky;
+	margin-top: -17%;
+	z-index: 4;
+	color: #FFFFFF;
+	width: 100%;
+}
+
+.scroll {
+	z-index: 10;
+	display: inline-block;
+	font: 100 1.2em 'Darker Grotesque', sans-serif;
+	letter-spacing:0.2em;
+	transform: rotate(-90deg);
+	width: 500px;
+	position: fixed;	
+	padding: 1em;
+    left: 61%;
+    top: 20%;   
+}
+
+.sc {
+	display: inline-block;
+	 width: 15px;
+	 height: 15px;
+	 border: 1px solid #FFFFFF;
+	 overflow: hidden;
+}
+
+.sc1 {
+	display: inline-block;
+	margin-left: 100px; 
+}
+
+a {
+	padding: 7px;
+
+}
+
+a:hover {
+	background: #FFFFFF;
+	
+}
+
